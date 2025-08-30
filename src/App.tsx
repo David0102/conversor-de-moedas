@@ -1,9 +1,9 @@
+import Navbar from "./components/Navbar"
 
 function App() {
-
   return (
-    <div className="p-6">
-      <h1 className="font-bold">Ola mundo</h1>
+    <div className="min-h-screen bg-white">
+      <Navbar />
     </div>
   )
 }
