@@ -13,7 +13,7 @@ export default function ConvertSection() {
     const [result, setResult] = useState('')
 
 
-    // Função para converter string em número válido
+    // Converte string em número válido
     const parseAmount = (value: string): number => {
         if (!value || value === '') return 0
         const normalizedValue = value.replace(',', '.')
@@ -23,14 +23,14 @@ export default function ConvertSection() {
         return parsed
     }
 
-    // Opções de moedas para o seletor
+    // Opções de moedas
     const currencyOptions = currencies.map(currency => ({
         value: currency.currencyAcronym,
         label: currency.currencyAcronym,
         flag: currency.currencyFlag
     }))
 
-    // Função para realizar a conversão
+    // Realiza a conversão de moedas
     const handleConvert = async () => {
         const numericAmount = parseAmount(amount)
 
@@ -58,7 +58,7 @@ export default function ConvertSection() {
     }
 
     return (
-        <section className="py-16" style={{ background: 'linear-gradient(180deg, #020828 0%, #0A146E 100%)' }}>
+        <section className="py-16">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-white mb-4">

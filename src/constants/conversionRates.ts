@@ -1,6 +1,6 @@
 import type { ConversionRate } from "../types/conversionRate";
 
-/* Taxas de conversão fixas para conversão de moedas offline*/
+// Taxas de conversão fixas para conversão de moedas
 export const fixedConversionRates: ConversionRate[] = [
     { from: 'BRL', to: 'USD', rate: 0.18 },
     { from: 'USD', to: 'BRL', rate: 5.43 },
