@@ -1,5 +1,6 @@
 import type { Currency } from '../types/currency'
 
+// Moedas suportadas para conversão.
 export const currencies: Currency[] = [
     { currencyAcronym: 'AED', currencyName: 'United Arab Emirates Dirham', currencyFlag: 'ae' },
     { currencyAcronym: 'AFN', currencyName: 'Afghan Afghani', currencyFlag: 'af' },
