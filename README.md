@@ -94,14 +94,14 @@ O projeto utiliza **taxas de câmbio fixas** como fallback para as principais co
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **React 19** - Biblioteca para interface de usuário
-- **TypeScript** - Tipagem estática
-- **Vite** - Build tool e dev server
-- **Tailwind CSS** - Framework CSS
-- **Material-UI** - Componentes de interface
-- **Axios** - Cliente HTTP
-- **Vitest** - Framework de testes
-- **React Testing Library** - Testes de componentes
+- **React 19** 
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Material-UI**
+- **Axios**
+- **Vitest**
+- **React Testing Library**
 
 ## 🧪 Testes
 
