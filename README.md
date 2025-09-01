@@ -1,6 +1,6 @@
 # Convert Coin 💱
 
-Um conversor de moedas moderno e intuitivo desenvolvido como projeto de desafio. Permite conversão entre mais de 160 moedas diferentes com taxas de câmbio fixas para as principais moedas.
+Um conversor de moedas moderno e intuitivo desenvolvido como projeto de desafio. Permite conversão entre mais de 160 moedas diferentes com taxas de câmbio em tempo real via API.
 
 ## 🚀 Como Rodar o Projeto
 
@@ -21,12 +21,19 @@ cd convert-coin
 npm install
 ```
 
-3. **Execute o projeto em modo de desenvolvimento**
+3. **Configure as variáveis de ambiente**
+Crie um arquivo `.env` na raiz do projeto:
+```bash
+VITE_ACCESS_KEY_EXCHANGE_RATE=f3c4fc668d56c10239b2b72fef8c592b
+```
+> **Nota**: Esta é uma chave de acesso de teste fornecida pelo ExchangeRate, liberada especificamente para fins de demonstração e desenvolvimento.
+
+4. **Execute o projeto em modo de desenvolvimento**
 ```bash
 npm run dev
 ```
 
-4. **Acesse a aplicação**
+5. **Acesse a aplicação**
 Abra seu navegador em `http://localhost:5173`
 
 ### Outros Comandos Disponíveis
@@ -94,16 +101,6 @@ O projeto utiliza **taxas de câmbio fixas** para as principais conversões:
 - **Axios** - Cliente HTTP
 - **Vitest** - Framework de testes
 - **React Testing Library** - Testes de componentes
-
-## 📱 Funcionalidades
-
-- ✅ Conversão entre 167+ moedas
-- ✅ Interface responsiva e moderna
-- ✅ Taxas de câmbio fixas para principais moedas
-- ✅ Suporte a bandeiras dos países
-- ✅ Cálculo em tempo real
-- ✅ Design intuitivo e acessível
-- ✅ Testes automatizados
 
 ## 🧪 Testes
 
