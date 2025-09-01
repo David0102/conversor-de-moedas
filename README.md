@@ -60,7 +60,20 @@ O projeto suporta **167 moedas diferentes** de países ao redor do mundo, inclui
 
 ## 🔄 Taxas de Câmbio Fixas
 
-O projeto utiliza **taxas de câmbio fixas** para as principais conversões:
+O projeto utiliza **taxas de câmbio fixas** como fallback para as principais conversões:
+
+### Taxas baseadas em USD (1 USD = ?)
+
+| Moeda | Taxa | País |
+|---|---|---|
+| EUR | 0.86 | 🇪🇺 Euro |
+| GBP | 0.74 | 🇬🇧 Libra Esterlina |
+| JPY | 147.16 | 🇯🇵 Iene Japonês |
+| BRL | 5.43 | 🇧🇷 Real Brasileiro |
+| CAD | 1.37 | 🇨🇦 Dólar Canadense |
+| AUD | 1.53 | 🇦🇺 Dólar Australiano |
+
+### Conversões Bidirecionais Principais
 
 | De | Para | Taxa |
 |---|---|---|
