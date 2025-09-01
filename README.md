@@ -37,25 +37,6 @@ npm run dev
 5. **Acesse a aplicação**
 Abra seu navegador em `http://localhost:5173`
 
-### Outros Comandos Disponíveis
-
-```bash
-# Build para produção
-npm run build
-
-# Preview da build de produção
-npm run preview
-
-# Executar testes
-npm run test
-
-# Executar testes com interface
-npm run test:ui
-
-# Linting
-npm run lint
-```
-
 ## 💰 Moedas Suportadas
 
 O projeto suporta **167 moedas diferentes** de países ao redor do mundo, incluindo:
