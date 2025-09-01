@@ -29,14 +29,9 @@ class CurrencyService {
             return response.data.result
         } catch (error: any) {
             console.error('Erro na conversão de moeda:', error)
-
-            if (error.code === 'NETWORK_ERROR' || error.code === 'ERR_NETWORK' || error.message === 'Network Error') {
-                console.log('Tentando usar taxas fixas devido ao erro de rede...')
-                // Tenta a conversão usando as taxas fixas
-                return this.useFixedRate(from, to, amount)
-            }
-
-            throw error
+            console.log('Tentando usar taxas fixas devido ao erro da API...')
+            // Tenta a conversão usando as taxas fixas
+            return this.useFixedRate(from, to, amount)
         }
     }
 
@@ -62,13 +57,8 @@ class CurrencyService {
             throw new Error('API response not successful')
         } catch (error: any) {
             console.error('Erro ao buscar taxas de câmbio:', error)
-
-            if (error.code === 'NETWORK_ERROR' || error.code === 'ERR_NETWORK' || error.message === 'Network Error') {
-                console.log('Tentando usar taxas fixas devido ao erro de rede...')
-                return this.getFallbackRates()
-            }
-
-            throw error
+            console.log('Tentando usar taxas fixas devido ao erro da API...')
+            return this.getFallbackRates()
         }
     }
 
