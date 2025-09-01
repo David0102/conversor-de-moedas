@@ -35,7 +35,7 @@ export default function ConvertSection() {
         const numericAmount = parseAmount(amount)
 
         if (numericAmount === 0) {
-            setResult('0')
+            setResult('')
             return
         }
 

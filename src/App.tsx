@@ -5,9 +5,9 @@ import ExchangeRateSection from "./components/ExchangeRateSection"
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="h-screen bg-white flex flex-col">
       <Navbar />
-      <div style={{ background: 'linear-gradient(180deg, #020828 0%, #0A146E 100%)' }}>
+      <div className="flex-1" style={{ background: 'linear-gradient(180deg, #020828 0%, #0A146E 100%)' }}>
         <ConvertSection />
         <ExchangeRateSection />
       </div>
