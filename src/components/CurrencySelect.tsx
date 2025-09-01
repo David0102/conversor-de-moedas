@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
+import { translations } from '../constants/translations'
+import { useLanguage } from '../contexts/LanguageContext'
 
 interface CurrencyOption {
     value: string
@@ -22,6 +24,7 @@ export default function CurrencySelect({
     options,
     className = ""
 }: CurrencySelectProps) {
+    const { language } = useLanguage()
     const [isOpen, setIsOpen] = useState(false)
     const [searchTerm, setSearchTerm] = useState('')
     const dropdownRef = useRef<HTMLDivElement>(null)
@@ -70,7 +73,7 @@ export default function CurrencySelect({
                                 type="text"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                placeholder="Search currency..."
+                                placeholder={translations[language].searchCurrency}
                                 className="w-full px-3 py-2 text-sm border border-gray-200 rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                                 onClick={(e) => e.stopPropagation()}
                             />

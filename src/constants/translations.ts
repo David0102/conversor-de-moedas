@@ -14,7 +14,8 @@ export const translations = {
         exchangeRatesDescription: 'Acompanhe as principais moedas do mundo',
         exchangeRatesNote: '* Valores em relação ao Dólar Americano (USD)',
         errorConverting: 'Erro ao converter moeda',
-        errorLoadingRates: 'Erro ao carregar taxas'
+        errorLoadingRates: 'Erro ao carregar taxas',
+        searchCurrency: 'Buscar moeda...'
     },
     en: {
         appTitle: 'Convert Coin',
@@ -31,6 +32,7 @@ export const translations = {
         exchangeRatesDescription: 'Track the world\'s main currencies',
         exchangeRatesNote: '* Values relative to US Dollar (USD)',
         errorConverting: 'Error converting currency',
-        errorLoadingRates: 'Error loading rates'
+        errorLoadingRates: 'Error loading rates',
+        searchCurrency: 'Search currency...'
     }
 }
