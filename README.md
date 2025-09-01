@@ -28,6 +28,7 @@ Crie um arquivo `.env` na raiz do projeto:
 VITE_ACCESS_KEY_EXCHANGE_RATE=f3c4fc668d56c10239b2b72fef8c592b
 ```
 > **Nota**: Esta é uma chave de acesso de teste fornecida pelo ExchangeRate, liberada especificamente para fins de demonstração e desenvolvimento.
+> **Limitação**: A API do ExchangeRate aceita apenas 100 requisições por mês no plano gratuito.
 
 4. **Execute o projeto em modo de desenvolvimento**
 ```bash
