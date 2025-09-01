@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react'
 import ExchangeRateCard from './ExchangeRateCard'
 import currencyService from '../services/currencyService'
 import type { Rate } from '../types/rate'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../constants/translations'
 
 export default function ExchangeRateSection() {
+    const { language } = useLanguage()
     const [rates, setRates] = useState<Rate[]>([])
     const [loading, setLoading] = useState(true)
 
@@ -28,13 +31,13 @@ export default function ExchangeRateSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-white mb-4">
-                        Taxas de Câmbio
+                        {translations[language].exchangeRates}
                     </h2>
                     <p className="text-xl text-gray-200 mb-2">
-                        Acompanhe as principais moedas do mundo
+                        {translations[language].exchangeRatesDescription}
                     </p>
                     <p className="text-sm text-gray-300 italic">
-                        * Valores em relação ao Dólar Americano (USD)
+                        {translations[language].exchangeRatesNote}
                     </p>
                 </div>
 

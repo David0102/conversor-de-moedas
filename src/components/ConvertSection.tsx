@@ -4,8 +4,11 @@ import Input from './Input'
 import { currencies } from '../constants/currencies'
 import currencyService from '../services/currencyService'
 import toast from 'react-hot-toast'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../constants/translations'
 
 export default function ConvertSection() {
+    const { language } = useLanguage()
     const [amount, setAmount] = useState('')
     const [fromCurrency, setFromCurrency] = useState('USD')
     const [toCurrency, setToCurrency] = useState('BRL')
@@ -51,7 +54,7 @@ export default function ConvertSection() {
             setResult(response)
         } catch (error) {
             console.error(`Erro ao converter moeda: ${error}`)
-            toast.error('Erro ao converter moeda')
+            toast.error(translations[language].errorConverting)
         } finally {
             setIsLoading(false)
         }
@@ -62,10 +65,10 @@ export default function ConvertSection() {
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-white mb-4">
-                        Conversor de Moedas
+                        {translations[language].currencyConverter}
                     </h2>
                     <p className="text-xl text-gray-200">
-                        Converta valores entre diferentes moedas
+                        {translations[language].convertDescription}
                     </p>
                 </div>
 
@@ -74,7 +77,7 @@ export default function ConvertSection() {
                         <div className="flex items-end gap-4">
                             <div className="flex-1">
                                 <Input
-                                    label="De"
+                                    label={translations[language].from}
                                     value={fromCurrency}
                                     onChange={setFromCurrency}
                                     options={currencyOptions}
@@ -98,7 +101,7 @@ export default function ConvertSection() {
 
                             <div className="flex-1">
                                 <Input
-                                    label="Para"
+                                    label={translations[language].to}
                                     value={toCurrency}
                                     onChange={setToCurrency}
                                     options={currencyOptions}
@@ -108,16 +111,16 @@ export default function ConvertSection() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <Input
-                                label="Valor"
+                                label={translations[language].value}
                                 type="number"
                                 value={amount}
                                 onChange={setAmount}
-                                placeholder="Digite o valor"
+                                placeholder={translations[language].enterValue}
                             />
 
                             <div className="space-y-2">
                                 <label className="block text-sm font-normal text-gray-500">
-                                    Resultado
+                                    {translations[language].result}
                                 </label>
                                 <div className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-lg font-semibold text-blue-600">
                                     {result ? `${Number(result).toFixed(2)} ${toCurrency}` : '0.00'}
@@ -138,7 +141,7 @@ export default function ConvertSection() {
                                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
                             )}
-                            {isLoading ? 'Convertendo...' : 'Converter'}
+                            {isLoading ? translations[language].converting : translations[language].convert}
                         </button>
                     </div>
                 </Card>

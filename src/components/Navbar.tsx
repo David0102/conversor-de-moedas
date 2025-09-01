@@ -1,8 +1,9 @@
-import { useState } from 'react'
 import LanguageIcon from '@mui/icons-material/Language'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../constants/translations'
 
 export default function Navbar() {
-    const [language, setLanguage] = useState('pt')
+    const { language, setLanguage } = useLanguage()
 
     return (
         <nav className="shadow-lg" style={{ backgroundColor: '#020828' }}>
@@ -10,7 +11,7 @@ export default function Navbar() {
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center">
                         <h1 className="text-2xl font-bold text-white">
-                            {language === 'pt' ? 'Convert Coin' : 'Convert Coin'}
+                            {translations[language].appTitle}
                         </h1>
                     </div>
 
@@ -18,7 +19,7 @@ export default function Navbar() {
                         <LanguageIcon className="text-white" />
                         <select
                             value={language}
-                            onChange={(e) => setLanguage(e.target.value)}
+                            onChange={(e) => setLanguage(e.target.value as 'pt' | 'en')}
                             className="bg-gray-700 text-white cursor-pointer px-3 py-1 rounded-lg text-sm font-medium border-none focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         >
                             <option value="pt">PT</option>
