@@ -37,6 +37,12 @@ npm run dev
 5. **Acesse a aplicação**
 Abra seu navegador em `http://localhost:5173`
 
+## 🌐 Testar Online
+
+Teste a aplicação online:
+
+**[🚀 Acessar Convert Coin Online](https://conversor-de-moedas-eight-bice.vercel.app/)**
+
 ## 💰 Moedas Suportadas
 
 O projeto suporta **167 moedas diferentes** de países ao redor do mundo, incluindo:
